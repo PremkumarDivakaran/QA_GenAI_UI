@@ -25,6 +25,11 @@ function Sidebar() {
               </Link>
             </li>
             <li className="sidebar-item">
+              <Link to="/user-story-to-testcase" className="sidebar-link">
+                User Story to Test Case
+              </Link>
+            </li>
+            <li className="sidebar-item">
               <Link to="/config" className="sidebar-link">
                 Configuration
               </Link>

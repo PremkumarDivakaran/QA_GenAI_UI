@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import SwaggerToRestAssuredPage from './components/SwaggerToRestAssuredPage';
 import SeleniumToPlaywrightPage from './components/SeleniumToPlaywrightPage';
+import UserStoryToTestcase from './components/UserStoryToTestcase';
 import ConfigPage from './components/ConfigPage';
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/generate" element={<SwaggerToRestAssuredPage />} />
             <Route path="/selenium-to-playwright" element={<SeleniumToPlaywrightPage />} />
+            <Route path="/user-story-to-testcase" element={<UserStoryToTestcase />} />
             <Route path="/config" element={<ConfigPage />} />
             {/* Default route */}
             <Route path="/" element={<SwaggerToRestAssuredPage />} />
