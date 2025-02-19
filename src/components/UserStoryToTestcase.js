@@ -66,7 +66,7 @@ function GenerateUserStoryToTestcase() {
           style={{ width: '90%', fontSize: '16px', padding: '10px' }}
           value={userStory}
           onChange={(e) => setUserStory(e.target.value)}
-          placeholder="Enter user story here..."
+          placeholder="Enter user story here...."
         />
       </div>
 
@@ -77,7 +77,7 @@ function GenerateUserStoryToTestcase() {
           style={{ width: '90%', fontSize: '16px', padding: '10px' }}
           value={acceptanceCriteria}
           onChange={(e) => setAcceptanceCriteria(e.target.value)}
-          placeholder="Enter Acceptance Criteria here..."
+          placeholder="Enter Acceptance Criteria here...."
         />
       </div>
       
