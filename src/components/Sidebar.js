@@ -21,7 +21,7 @@ function Sidebar() {
             </li>
             <li className="sidebar-item">
               <Link to="/selenium-to-playwright" className="sidebar-link">
-                Selenium to Playwright
+                Selenium to Playwright [WIP]
               </Link>
             </li>
             <li className="sidebar-item">
