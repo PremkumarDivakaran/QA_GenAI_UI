@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# QA-GenAI-UI
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **React.js UI application** designed for **QA professionals** to utilize **LLM (Large Language Models) to solve problems**. This UI requires a **backend service** to function properly.
 
-## Available Scripts
+The backend service for this project is hosted separately on GitHub. You can find it here:
+👉 [QA-GenAI-Backend](https://github.com/PremkumarDivakaran/QA_GenAI_Backend)
 
-In the project directory, you can run:
+---
+## **Getting Started**
 
-### `npm start`
+### **1. Run Locally (Without Docker)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+#### **Prerequisites**
+- Install [Node.js](https://nodejs.org/) (Recommended: LTS version)
+- Install [VS Code](https://code.visualstudio.com/) (Optional, but recommended)
+- Ensure the required **backend service** is running ([QA-GenAI-Backend](https://github.com/PremkumarDivakaran/QA_GenAI_Backend))
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### **Steps**
+1. **Open the project in VS Code**
+2. **Open a terminal** in VS Code and run the following commands:
 
-### `npm test`
+   ```sh
+   npm install  # Install dependencies
+   npm install react-icons  # Install react-icons package
+   npm start  # Start the development server
+   ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+3. Open **http://localhost:3000** in your browser.
+4. Ensure the **backend service** is running and accessible.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### **2. Run with Docker**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### **Prerequisites**
+- Install [Docker](https://www.docker.com/)
+- Install [VS Code](https://code.visualstudio.com/) (Optional, but recommended)
+- Ensure the required **backend service** is running ([QA-GenAI-Backend](https://github.com/PremkumarDivakaran/QA_GenAI_Backend))
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### **Steps**
+1. **Open the project in VS Code**
+2. **Open a terminal** and run the following commands:
 
-### `npm run eject`
+   ```sh
+   docker build -t qa-genai-ui .  # Build the Docker image
+   docker run -d --name genai-ui -p 3000:3000 qa-genai-ui  # Run the container in detached mode
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Open **http://localhost:3000** in your browser.
+4. Ensure the **backend service** is running and accessible.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### **3. Useful Docker Commands**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### **Check Running Containers**
+```sh
+docker ps
+```
 
-## Learn More
+#### **Stop the Running Container**
+```sh
+docker stop genai-ui
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### **Restart the Container**
+```sh
+docker start genai-ui
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### **Remove the Container**
+```sh
+docker rm genai-ui
+```
 
-### Code Splitting
+#### **Remove the Docker Image**
+```sh
+docker rmi qa-genai-ui
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+### **Backend Repository**
+The backend service for this project is hosted at:
+👉 [QA-GenAI-Backend](https://github.com/PremkumarDivakaran/QA_GenAI_Backend)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Make sure the backend is running before starting the UI.
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
